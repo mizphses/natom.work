@@ -2,8 +2,10 @@
 <html>
   <head>
     <link href="{{ '/assets/main.css' | relative_url }}" rel="stylesheet">
+    <script src="{{ '/assets/js/uikit.min.js' | relative_url }}"></script>
   </head>
   <body>
+    {% include navbar.html %}
     {{content}}
   </body>
 </html>

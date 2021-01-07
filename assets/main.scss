@@ -2,3 +2,11 @@
 ---
 @import url('https://use.typekit.net/ddp0jwu.css');
 @import 'index';
+
+html{
+  font-feature-settings: "palt";
+}
+
+.uk-logo{
+  font-family: "ヒラギノUD角ゴ W5 JIS2004", "Hiragino UD Sans W5 JIS2004", "ヒラギノUD角ゴ StdN", alber-new-web, sans-serif;
+}
