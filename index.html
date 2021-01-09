@@ -1,14 +1,19 @@
 ---
 layout: default
 ---
-<div class="hero">
-  {% include navbar.html %}
-</div>
-<div class="uk-container uk-container-expand">
-  <p>あ</p>
-</div>
+<section class="main uk-animation-fade">
+  <div class="herobar cp-flex-center">
+    <h1  class="uk-disabled" style="user-select: none;">{{site.title}}</h1>
+    <p>文字（欧文/かな）・WEB・印刷物のデザインをする人の公式サイト</p>
+  </div>
+  <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;height:10vh;">
+
+    {% include navigation.html %}
+
+  </nav>
+</section>
 <style>
-  .hero{
-    height: 80vw;
+  .herobar{
+    height: 88vh;
   }
 </style>

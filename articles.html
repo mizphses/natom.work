@@ -1,0 +1,15 @@
+---
+layout: page
+title:  "Articles"
+permalink: /articles/
+---
+<div class="uk-container uk-container-xlarge">
+
+{% for page in site.posts %}
+    <div class="uk-card uk-card-default uk-card-body uk-box-shadow-medium" style="margin-top: 1em; margin-bottom: 1em;">
+        <h3 class="uk-card-title">{{ page.title }}</h3>
+        <p>{{ page.description }}</p>
+        <a href="{{page.url}}">もっと見る</a>
+    </div>
+{% endfor %}
+</div>

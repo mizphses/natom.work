@@ -8,5 +8,52 @@ html{
 }
 
 .uk-logo{
-  font-family: "ヒラギノUD角ゴ W5 JIS2004", "Hiragino UD Sans W5 JIS2004", "ヒラギノUD角ゴ StdN", alber-new-web, sans-serif;
+  font-family: "ヒラギノUD角ゴ W5 JIS2004", "Hiragino UD Sans W5 JIS2004", "ヒラギノUD角ゴ StdN", sans-serif;
+}
+
+.uk-text-bold, b, h1, h2{
+  font-family: "ヒラギノUD角ゴ w6 JIS2004", "Hiragino UD Sans w6 JIS2004", "ヒラギノUD角ゴ StdN", sans-serif;
+  font-weight: 700;
+}
+
+.cp-flex-center {
+  margin: 10px auto;
+  height: 80vh;
+  display: flex; /* 子要素をflexboxで揃える */
+  flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+  justify-content: center; /* 子要素をflexboxにより中央に配置する */
+  align-items: center;  /* 子要素をflexboxにより中央に配置する */
+}
+
+.cp-page-header{
+  height: 20vh;
+  display: flex; /* 子要素をflexboxで揃える */
+  flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+  justify-content: center; /* 子要素をflexboxにより中央に配置する */
+  align-items: left;  /* 子要素をflexboxにより中央に配置する */
+  background-color: #c4ffbc;
+}
+
+.inside-cp-header{
+  font-size: 2em;
+  font-weight: 700;
+  width:90vw;
+}
+
+.inside-cp-header-subt{
+  font-size: 1em;
+  font-weight: 700;
+  width:90vw;
+}
+
+.cp-lh-0{
+  line-height: 0%;
+}
+
+.cp-lh-1{
+  line-height: 150%;
+}
+
+.cp-footer{
+  background-color: #ebebeb;
 }

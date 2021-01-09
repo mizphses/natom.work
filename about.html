@@ -1,0 +1,81 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+<h2>noamnastについて</h2>
+<p>中央大学経済学部</p>
+
+<p>主にバックエンドが好きな機械オタク。</p>
+
+<p>英語とRubyが得意で数学とJavaが苦手。<small>（Javaはこの世から完全かつ不可逆的になくなってほしい：本人談）</small></p>
+
+<p>フォントがとっても好きで、書体制作もしている。<small>そのうちこのサイトの欧文・かなは独自書体にしてもいいかもしれない。</small></p>
+
+<p>入試に向けてプログラミングの勉強ができなかったことを言い訳にしているが、プログラミングスキルは2021年1月現在Rails・Django・Flask・Nuxtがそれぞれちょっとわかる程度まで落ちていることが判明した。（昔はExpressもちょーーっとだけ書けた）</p>
+
+<script>
+  var ctx = document.getElementById("myChart");
+  var myChart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: ["英語", "数学", "国語", "理科", "社会"],
+    datasets: [{
+      label: 'Aさん',
+      data: [92, 72, 86, 74, 86],
+      backgroundColor: 'RGBA(225,95,150, 0.5)',
+      borderColor: 'RGBA(225,95,150, 1)',
+      borderWidth: 1,
+      pointBackgroundColor: 'RGB(46,106,177)'
+    }],
+  },
+    options: {
+      title: {
+        display: true,
+      text: 'プログラミング、どれだけわかる？'
+      },
+      scale:{
+        ticks:{
+          suggestedMax: 100,
+          suggestedMin: 0,
+          stepSize: 10,
+          callback: function(value, index, values){
+            return  value
+          }
+        }
+      }
+    }
+  })
+</script>
+
+
+<canvas id="myRaderChart"></canvas>
+<script>
+  var ctx = document.getElementById("myRaderChart");
+  var myRadarChart = new Chart(ctx, {
+      type: 'radar', 
+      data: { 
+          labels: ["Ruby系", "Python系", "PHP", "Java", "フロントエンド/HTML/CSS"],
+          datasets: [{
+              label: '私',
+              data: [5, 3, 2, 0, 4],
+              backgroundColor: 'RGB(214,250,137,0.4)',
+              borderColor: 'RGB(250,137,139)',
+              borderWidth: 1,
+              pointBackgroundColor: 'RGB()'
+          }]
+      },
+      options: {
+          title: {
+              display: true,
+          text: 'プログラミング、どれだけわかる？'
+          },
+          scale:{
+              ticks:{
+                  suggestedMin: 0,
+                  suggestedMax: 10
+              }
+          }
+      }
+  });
+  </script>
