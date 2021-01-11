@@ -4,12 +4,29 @@ title: "Works"
 permalink: /works/
 ---
 <p>アプリや作品を置いています。</p>
+<h3>このサイトで公開している作品（下と重複することがあります）</h3>
+{% for page in site.posts %}
+  {% if page.tags[0] == "works" %}
+    <div class="uk-card uk-card-default uk-card-body uk-box-shadow-medium" style="margin-top: 1em; margin-bottom: 1em;">
+        <h3 class="uk-card-title">{{ page.title }}</h3>
+        <p>{{ page.date| date: "%Y年%m月%d日" }} | Tags:
+          {% if page.tags %}
+            {% for tag in page.tags %}
+              <span class="uk-badge">{{tag}}</span>
+            {% endfor %}
+          {% endif %}
+        </p>
+        <p>{{ page.description }}</p>
+        <a href="{{page.url}}">もっと見る</a>
+    </div>
+  {% endif %}
+{% endfor %}
 <h3>WEB/Server-App</h3>
 <div class="cp-lh-0">
   <div class="uk-card uk-card-default uk-card-body uk-box-shadow-medium" style="margin-top: 2em; margin-bottom: 2em;">
     <h3 class="uk-card-title">中央大学生専用SNS Chudaisay</h3>
     <small>2020.12.30</small> <span class="uk-badge">NodeJS</span> <span class="uk-badge">NGINX</span> <span class="uk-badge">CSS</span>
-    <h5>Openchatに入るのが嫌になったのでSNSごと作りました。多少デザインを改変していますが中身は当時最新版のMisskey12です。中央大学生及び中央大学に{{ "now" | date: "%Y" }}年までに入学することが決まっている方のみ参加可能です。目標は中大生全員をFediverse沼にひきづりこむことです。</h5>
+    <h5>Openchatに入るのが嫌になったのでSNSごと作りました。多少デザインを改変していますが中身は当時最新版のMisskey12です。中央大学生及び中央大学に{{ "now" | date: "%Y" }}年度在籍者及び入学予定者のみ参加可能です。なんだかんだでユーザーは多くないですが連合TLに対応しています。</h5>
     <a href="https://chuo.educity.asia">行ってみる</a>
   </div>
   <div class="uk-card uk-card-default uk-card-body uk-box-shadow-medium" style="margin-top: 2em; margin-bottom: 2em;">

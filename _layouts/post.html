@@ -11,9 +11,12 @@ layout: base
       最終更新日：{{ page.upddate| date: "%Y年%m月%d日"  }}
       {% endif %}
     </p>
-    {% for tag in site.tags %}
-    <span class="uk-badge">{{tag[0]}}</span>
-    {% endfor %}
+    {% if site.tags %}
+    Tags:
+      {% for tag in site.tags %}
+        <a href="{{site.baseurl}}/tags#{{tag[0]}}" class="uk-badge">{{tag[0]}}</a>
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
 <div style="height:2em;"></div>

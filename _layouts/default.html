@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#">
+    <title>{{site.title}}</title>
     <meta name="description" content='{{site.description}}'>
+    <meta property="og:url" content="https://www.natom.work" />
+    {% if page.url == '/' or page.url == '/index' %}
+      <meta property="og:type" content="website" />
+    {% else %}
+      <meta property="og:type" content="article" />
+    {% endif %}
+    {% if page.title %}
+      <meta property="og:title" content="{{page.title}}" />
+      {% else %}
+      <meta property="og:title" content="Natom" />
+    {% endif %}
+    <meta property="og:description" content="{{site.description}}" />
+    <meta property="og:site_name" content="{{site.title}}" />
+    {% if page.mainimg %}
+    <meta property="og:image" content="{{ page.mainimg }}" />
+    {% else %}
+    <meta property="og:image" content="{{ '/assets/img/ogp.png' | relative_url }}" />
+    {% endif %}
+    <meta name="twitter:card" content="Summary Card" />
+    <meta name="twitter:site" content="@_nilnil_" />
     <link href="{{ '/assets/main.css' | relative_url }}" rel="stylesheet">
     <script src="{{ '/assets/js/uikit.min.js' | relative_url }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
