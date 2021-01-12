@@ -3,12 +3,15 @@ layout: page
 title: "Works"
 permalink: /works/
 ---
-<p>アプリや作品を置いています。</p>
 <h3>このサイトで公開している作品（下と重複することがあります）</h3>
 {% for page in site.posts %}
   {% if page.tags[0] == "works" %}
     <div class="uk-card uk-card-default uk-card-body uk-box-shadow-medium" style="margin-top: 1em; margin-bottom: 1em;">
+      {% if page.worktitle %}
+        <h3 class="uk-card-title">{{ page.worktitle }}</h3>
+      {% else %}
         <h3 class="uk-card-title">{{ page.title }}</h3>
+      {% endif %}
         <p>{{ page.date| date: "%Y年%m月%d日" }} | Tags:
           {% if page.tags %}
             {% for tag in page.tags %}
@@ -17,7 +20,7 @@ permalink: /works/
           {% endif %}
         </p>
         <p>{{ page.description }}</p>
-        <a href="{{page.url}}">もっと見る</a>
+        <a href="{{page.url}}">これについてのページを見る</a>
     </div>
   {% endif %}
 {% endfor %}
